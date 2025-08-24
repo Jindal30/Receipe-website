@@ -20,3 +20,6 @@ It showcases popular Indian desserts like **Gulab Jamun** and **Barfi** with cle
 - **CSS3** – Styling, layout, and responsiveness  
 
 ---
+
+## 🌐 Live Demo
+[Click here to view the website](https://your-username.github.io/recipe-website/)

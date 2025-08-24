@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.container{
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background: #f9f9f9;
+}
+
+.navContainer{
+    width: 100vw;
+    background: linear-gradient(225deg, #ffd6bb, #c3c6cc, #92d6eb);
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+nav{
+    width: 100%;
+    padding-right: 2rem;
+}
+
+#navList{
+    width: 100%;
+    padding: 20px;
+    /* margin-left: 15px;
+    margin-right: 15px; */
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navLogo{
+    font-size: 2.8rem;
+    color: rgba(12, 2, 41, 0.948);
+}
+
+a{
+    text-decoration: none;
+    color: #333333;
+}
+
+#navItems{
+    font-size: 1.3rem;
+    display: flex;
+    gap: 25px;
+}
+
+.contentBox{
+    width: 80%;
+    /* height: 100%; */
+    margin: auto;
+    /* border: 1px solid black; */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 3rem;
+    box-shadow: 0px 0px 30px black;
+}
+
+.item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.leftBox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: #fff7f0;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.leftBox h2{
+    font-size: 2rem;
+    color: #5a2d0c;
+    border-bottom: 2px solid #f2a65a;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.leftBox h3{
+    margin: 5px;
+}
+
+.ingBox, .receipeBox {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    padding-left: 20px;
+}
+
+.ingBox li, .receipeBox li {
+    margin-bottom: 8px;
+    transition: transform 0.2s ease;
+}
+
+.ingBox li:hover, .receipeBox li:hover {
+    transform: translateX(5px);
+    color: #d35400;  /* highlight effect */
+}
+
+.receipeBox li {
+    margin-bottom: 12px;
+}
+
+.receipeBox li::marker {
+    color: #d35400; /* orange bullets for steps */
+    font-weight: bold;
+}
+
+.rightBox{
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s linear 0s;
+    /* box-shadow: 1px 1px 10px black;
+    border-radius: 20px; */
+}
+
+.rightBox img{
+    height: 400px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+.rightBox .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(36, 34, 34, 0.713);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.rightBox:hover .overlay{
+    opacity: 1;
+    transition: all 0.3s linear 0s;
+}
+
+.rightBox .overlay span{
+    color: white;
+    font-size: 1.2rem;
+}
+
+.rightBox:hover{
+    transform: scale(1.1);
+}
+
+.contactBox, .aboutBox {
+  width: 60%;
+  margin: 100px auto;
+  padding: 2rem;
+  background: #fff7f0;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+.contactBox h2, .aboutBox h2 {
+  font-size: 2rem;
+  color: #5a2d0c;
+  margin-bottom: 1rem;
+}
+
+.footerBox{
+    background: linear-gradient(225deg, #ffd6bb, #c3c6cc, #92d6eb);
+    width: 100%;
+    text-align: center;
+    min-height: 30px;
+}
+
+.footerBox p{
+    color: rgba(12, 2, 41, 0.948);
+    font-size: 1.4rem;
+}
+
+/* Tablets (width ≤ 1024px) */
+@media (max-width: 1024px) {
+  .contentBox {
+    width: 80%;  /* expand content area a bit */
+    padding: 2rem;
+  }
+
+  #navLogo {
+    font-size: 2rem;
+  }
+
+  #navItems {
+    font-size: 1.1rem;
+    gap: 15px;
+  }
+
+  .rightBox img {
+    height: 300px;  /* reduce image size */
+  }
+}
+
+/* Mobiles (width ≤ 768px) */
+@media (max-width: 768px) {
+  .navContainer {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  #navList {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  #navLogo {
+    font-size: 1.8rem;
+  }
+
+  #navItems {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contentBox {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .item {
+    flex-direction: column;   /* stack text & image */
+    gap: 20px;
+  }
+
+  .leftBox h2 {
+    font-size: 1.5rem;
+  }
+
+  .rightBox img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+  }
+}
+
+/* Extra small phones (width ≤ 480px) */
+@media (max-width: 480px) {
+  #navLogo {
+    font-size: 1.5rem;
+  }
+
+  #navItems {
+    font-size: 1rem;
+  }
+
+  .contentBox {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .leftBox h2 {
+    font-size: 1.3rem;
+  }
+
+  .ingBox, .receipeBox {
+    font-size: 1rem;
+  }
+}

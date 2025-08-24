@@ -22,4 +22,4 @@ It showcases popular Indian desserts like **Gulab Jamun** and **Barfi** with cle
 ---
 
 ## 🌐 Live Demo
-[Click here to view the website](https://your-username.github.io/recipe-website/)
+[Click here to view the website](https://jindal30.github.io/Receipe-website/)
